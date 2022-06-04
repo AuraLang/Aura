@@ -47,11 +47,11 @@ class Reader:
         if token[0] == token[-1] == '"':
             return T.LiteralStr(token)
         
+        if token in T.tokens_map:
+            return T.tokens_map[token]()
+
         if re.fullmatch('\w+', token):
             return T.Name(token)
-        
-        if token in ["+", "-", "*", "/", "%", "->", "!=", "==", ">", "<", ">=", "<=", "=", "."]:
-            return T.Operator(token)
 
         return token
 

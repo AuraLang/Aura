@@ -22,18 +22,23 @@ def main():
     
     # tokenize the source code
     tokens: Tokens.TokenList = Tokenizer.tokenize(source_code)
+    print(tokens)
 
     # validate the tokenlist
+    assert "This needs doing"
     isValid: bool = Expectations.isValid(tokens)
 
     if isValid:
         # build the AST
+        assert "This needs doing"
         ast: ASTBuilder.AST = ASTBuilder.AST(tokens)
     
         # compile AST into target
+        assert "This needs doing"
         target: type = CompilationTarget.getTarget(compilation_target)
 
         # run target transpiler
+        assert "This needs doing"
         target.execute(ast)
 
 if __name__ == "__main__":
