@@ -1,4 +1,4 @@
-import interpreter.ast.astbuilder as ASTBuilder
+import interpreter.ast.builder as ASTBuilder
 
 class Transpiler:
     def execute(ast: ASTBuilder.AST):

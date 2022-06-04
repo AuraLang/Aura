@@ -8,7 +8,7 @@ class TokenList(list):
                 out.append(token.__class__.__name__)
         return " ".join(out)
 
-class RawToken:
+class BaseToken:
     def __init__(self, details=None):
         self.details = details
     
@@ -18,19 +18,19 @@ class RawToken:
         return self.__class__.__name__
 
 # First Level Inheritance
-class Name(RawToken):
+class Name(BaseToken):
     ...
 
-class Literal(RawToken):
+class Literal(BaseToken):
     ...
 
-class NewLine(RawToken):
+class NewLine(BaseToken):
     ...
 
-class IndentMinus(RawToken):
+class IndentMinus(BaseToken):
     ...
 
-class IndentPlus(RawToken):
+class IndentPlus(BaseToken):
     _match_end = IndentMinus
 
 # Second Level Inheritance

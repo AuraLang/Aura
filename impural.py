@@ -4,9 +4,9 @@ import interpreter.tokens as Tokens
 
 import interpreter.lexer.tokenizer as Tokenizer
 
-import interpreter.validation.expectation_checker as Expectations
+import interpreter.validation.patterns as Expectations
 
-import interpreter.ast.astbuilder as ASTBuilder
+import interpreter.ast.builder as ASTBuilder
 
 import interpreter.compilation.target as CompilationTarget
 import interpreter.compilation.base_transpiler as BaseTranspiler
@@ -34,10 +34,8 @@ def main():
         ast: ASTBuilder.AST = ASTBuilder.AST(tokens)
     
         # compile AST into target
-        assert "This needs doing"
         target: type = CompilationTarget.getTarget(compilation_target)
 
-        # run target transpiler
         assert "This needs doing"
         target.execute(ast)
 

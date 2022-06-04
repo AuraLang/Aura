@@ -1,25 +1,25 @@
-from interpreter.tokens.base import RawToken
+from interpreter.tokens.base import BaseToken
 
-class KWPure(RawToken):
+class KWPure(BaseToken):
     ...
 
-class KWImpure(RawToken):
+class KWImpure(BaseToken):
     ...
 
-class KWIf(RawToken):
+class KWIf(BaseToken):
     ...
 
-class KWElif(RawToken):
+class KWElif(BaseToken):
     ...
 
-class KWElse(RawToken):
+class KWElse(BaseToken):
     ...
 
-class KWFor(RawToken):
+class KWFor(BaseToken):
     ...
 
-class KWWhile(RawToken):
+class KWWhile(BaseToken):
     ...
 
-class KWReturn(RawToken):
+class KWReturn(BaseToken):
     ...

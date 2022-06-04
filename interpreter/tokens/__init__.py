@@ -2,6 +2,8 @@ from lib2to3.pgen2.token import OP
 from interpreter.tokens.keywords import *
 from interpreter.tokens.operators import *
 from interpreter.tokens.base import *
+from interpreter.tokens.tokenlists import *
+from interpreter.tokens.composed import *
 
 tokens_map = {
     "(": OParen,

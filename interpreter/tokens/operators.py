@@ -1,6 +1,6 @@
-from interpreter.tokens.base import RawToken
+from interpreter.tokens.base import BaseToken
 
-class RawOperator(RawToken):
+class RawOperator(BaseToken):
     details = None
 
 class OPPlus(RawOperator):
@@ -45,8 +45,8 @@ class OPNotEquals(RawOperator):
 class OPPeriod(RawOperator):
     symbol = "."
 
-class CParen(RawToken):
+class CParen(BaseToken):
     ...
 
-class OParen(RawToken):
+class OParen(BaseToken):
     _match_end = CParen
