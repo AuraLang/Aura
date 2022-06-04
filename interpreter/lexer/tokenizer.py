@@ -7,7 +7,7 @@ def tokenize(code: str):
 
 # not exports
 
-import lexer.tokens as T
+import interpreter.tokens as T
 
 class Reader:
     punctuation: str = "+-*/.=<>,%!"
