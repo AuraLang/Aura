@@ -1,13 +1,13 @@
 import re
 import sys
 
+import interpreter.tokens as T
+
 # exports
-def tokenize(code: str):
+def tokenize(code: str) -> T.TokenList:
     return Reader().read(code).tokens
 
 # not exports
-
-import interpreter.tokens as T
 
 class Reader:
     punctuation: str = "+-*/.=<>,%!"
