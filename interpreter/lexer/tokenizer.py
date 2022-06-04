@@ -21,7 +21,7 @@ class Reader:
 
     def __init__(self):
         self.acc: str = ""
-        self.tokens: str = []
+        self.tokens: str = T.TokenList()
 
         self.strmode: bool = False
         self.stropen: str = ""
