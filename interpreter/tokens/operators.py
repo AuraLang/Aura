@@ -44,3 +44,9 @@ class OPNotEquals(RawOperator):
 
 class OPPeriod(RawOperator):
     symbol = "."
+
+class CParen(RawToken):
+    ...
+
+class OParen(RawToken):
+    _match_end = CParen

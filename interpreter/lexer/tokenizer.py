@@ -33,14 +33,6 @@ class Reader:
         self.linenumber: int = 0
     
     def get_token_type(self, token: str):
-        specials: dict = {
-            "\n": T.NewLine,
-            "(": T.OParen,
-            ")": T.CParen
-        }
-        if token in specials:
-            return specials[token]()
-
         if re.fullmatch('\d+(.\d+)?', token):
             return T.LiteralNum(token)
         

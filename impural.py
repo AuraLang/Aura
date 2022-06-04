@@ -22,7 +22,7 @@ def main():
     
     # tokenize the source code
     tokens: Tokens.TokenList = Tokenizer.tokenize(source_code)
-    print(tokens)
+    #print(tokens)
 
     # validate the tokenlist
     assert "This needs doing"

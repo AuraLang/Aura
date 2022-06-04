@@ -1,8 +1,13 @@
+from lib2to3.pgen2.token import OP
 from interpreter.tokens.keywords import *
 from interpreter.tokens.operators import *
 from interpreter.tokens.base import *
 
 tokens_map = {
+    "(": OParen,
+    ")": CParen,
+    "\n": NewLine,
+
     "+": OPPlus,
     "-": OPMinus,
     "/": OPSlash,

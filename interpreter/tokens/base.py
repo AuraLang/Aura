@@ -11,30 +11,31 @@ class TokenList(list):
 class RawToken:
     def __init__(self, details=None):
         self.details = details
+    
+    def __str__(self):
+        if self.details != None:
+            return f"{self.__class__.__name__}<\033[92m{self.details}\033[0m>"
+        return self.__class__.__name__
 
+# First Level Inheritance
 class Name(RawToken):
     ...
 
 class Literal(RawToken):
     ...
 
-class LiteralStr(Literal):
-    ...
-
-class LiteralNum(Literal):
-    ...
-
 class NewLine(RawToken):
-    ...
-
-class IndentPlus(RawToken):
     ...
 
 class IndentMinus(RawToken):
     ...
 
-class OParen(RawToken):
+class IndentPlus(RawToken):
+    _match_end = IndentMinus
+
+# Second Level Inheritance
+class LiteralStr(Literal):
     ...
 
-class CParen(RawToken):
+class LiteralNum(Literal):
     ...
