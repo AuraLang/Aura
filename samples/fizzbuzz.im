@@ -1,0 +1,8 @@
+pure str fizzify (num x)
+    str fizzes = (x % 3 == 0 * "Fizz") + (x % 5 == 0 * "Buzz")
+    if fizzes != ""
+        return fizzes
+    return x -> ToStr
+
+impure main
+    Range(100) -> map fizzify -> map IO.Out
